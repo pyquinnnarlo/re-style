@@ -1,0 +1,23 @@
+{
+"manifest_version": 3,
+"name": "Live Style Editor",
+"version": "1.0",
+"description": "Select an element on the page and edit its HTML and inline CSS live.",
+"icons": {
+"48": "icons.png"
+
+},
+
+  "action": {
+    "default_title": "Open Live Style Editor"
+  },
+"content_scripts": [
+{
+"matches": ["<all_urls>"],
+"js": ["./content_script.js"],
+"run_at": "document_idle"
+}
+],
+"host_permissions": ["<all_urls>"],
+"permissions": ["scripting", "activeTab", "storage" ]
+}
